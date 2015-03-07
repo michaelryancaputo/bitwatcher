@@ -1,0 +1,33 @@
+
+> react-isomorphic-starterkit@1.0.2 watch-client /Users/mike/Projects/bitwatch
+> webpack -cv --display-error-details --config webpack.client-watch.js && webpack-dev-server --config webpack.client-watch.js
+
+Hash: 5e2eef3617b70b51f326
+Version: webpack 1.7.2
+Time: 2750ms
+   [0] multi main 52 {0} [built]
+    + 210 hidden modules
+
+ERROR in ./src/views/Main.jsx
+Module build failed: SyntaxError: /Users/mike/Projects/bitwatch/src/views/Main.jsx: Unexpected token (9:12)
+   7 | function* getData(urlName) {
+   8 | 	return jquery.ajax(
+>  9 |         type: 'GET',
+     |             ^
+  10 |         url: 'http://macbrook.local:8000/api/' + urlName
+  11 | 	);
+  12 | }
+    at raise (/Users/mike/Projects/bitwatch/node_modules/babel-core/node_modules/acorn-babel/acorn_csp.js:343:15)
+    at unexpected (/Users/mike/Projects/bitwatch/node_modules/babel-core/node_modules/acorn-babel/acorn_csp.js:2278:5)
+    at expect (/Users/mike/Projects/bitwatch/node_modules/babel-core/node_modules/acorn-babel/acorn_csp.js:2266:18)
+    at parseExprList (/Users/mike/Projects/bitwatch/node_modules/babel-core/node_modules/acorn-babel/acorn_csp.js:3740:9)
+    at parseSubscripts (/Users/mike/Projects/bitwatch/node_modules/babel-core/node_modules/acorn-babel/acorn_csp.js:3154:24)
+    at parseSubscripts (/Users/mike/Projects/bitwatch/node_modules/babel-core/node_modules/acorn-babel/acorn_csp.js:3143:14)
+    at parseExprSubscripts (/Users/mike/Projects/bitwatch/node_modules/babel-core/node_modules/acorn-babel/acorn_csp.js:3119:12)
+    at parseMaybeUnary (/Users/mike/Projects/bitwatch/node_modules/babel-core/node_modules/acorn-babel/acorn_csp.js:3099:16)
+    at parseExprOps (/Users/mike/Projects/bitwatch/node_modules/babel-core/node_modules/acorn-babel/acorn_csp.js:3053:16)
+    at parseMaybeConditional (/Users/mike/Projects/bitwatch/node_modules/babel-core/node_modules/acorn-babel/acorn_csp.js:3029:16)
+ @ ./src/views/Routes.jsx 16:27-44
+http://localhost:8080/webpack-dev-server/
+webpack result is served from http://localhost:8080/dist/
+content is served from ./static
