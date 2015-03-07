@@ -1,6 +1,6 @@
 {
-  "name": "react-isomorphic-starterkit",
-  "version": "1.0.2",
+  "name": "bitwatcher",
+  "version": "0.0.1",
   "dependencies": {
     "async": {
       "version": "0.9.0",

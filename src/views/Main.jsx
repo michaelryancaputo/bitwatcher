@@ -55,7 +55,7 @@ const Main = React.createClass({
 		return (
 			<div>
 				<h1>
-					Welcome to React Isomorphic Starterkit.
+					Bitcoin Dashboard.
 				</h1>
 				<Ticker name="Bitfinex" price={this.state.bitfinex.bid} />
 				<Ticker name="Bitstamp" price={this.state.bitstamp.bid} />

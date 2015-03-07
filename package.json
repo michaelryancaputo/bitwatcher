@@ -1,13 +1,13 @@
 {
-  "name": "react-isomorphic-starterkit",
-  "description": "Isomorphic starterkit with server-side React rendering.",
-  "version": "1.0.2",
+  "name": "bitwatcher",
+  "description": "Bitcoin Exchange watcher dashboard.",
+  "version": "0.0.1",
   "license": "BSD-3",
   "repository": {
     "type": "git",
-    "url": "https://github.com/RickWong/react-isomorphic-starterkit.git"
+    "url": "https://github.com/michaelryancaputo/bitwatcher.git"
   },
-  "homepage": "https://github.com/RickWong/react-isomorphic-starterkit",
+  "homepage": "https://github.com/michaelryancaputo/bitwatcher",
   "keywords": [
     "react",
     "isomorphic",
@@ -26,13 +26,12 @@
     "watch": "eval 'npm run watch-server >tmp/server.log 2>&1 & SERVER_PID=$!';      eval 'npm run watch-client >tmp/client.log 2>&1 & CLIENT_PID=$!';     sleep 5;    npm run start;     kill $CLIENT_PID $SERVER_PID;"
   },
   "dependencies": {
-    "async": "0.9.0",
-    "hapi": "8.2.0",
+    "async": "^0.9.0",
+    "hapi": "^8.2.0",
     "jquery": "^2.1.3",
-    "react": "0.12.2",
-    "react-deferred": "^0.7.0",
-    "react-router": "0.12.4",
-    "superagent": "0.21.0",
+    "react": "^0.12.2",
+    "react-router": "^0.12.4",
+    "superagent": "^0.21.0",
     "underscore": "^1.8.2",
     "xchange.js": "^0.1.4"
   },
