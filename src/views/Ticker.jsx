@@ -3,28 +3,24 @@ import React from "react";
 import Superagent from "superagent";
 
 const Ticker = React.createClass({
-  updatePrice: function() {
 
-    this.setState({loaded: false});
-
-    jquery.get('/api/' + this.props.urlname).then(function(data) {
-      this.setState({
-        loaded: true,
-        data: data
-      });
-    }.bind(this));
-
-  },
   componentDidMount: function() {
 
-    jquery.get('/api/' + this.props.urlname).then(function(data) {
-      this.setState({
-        loaded: true,
-        data: data
-      });
-    }.bind(this));
+    this.interval = setInterval(this.updatePrice(this.props.urlname), 5000);
 
   },
+
+  componentWillUnmount: function() {
+      clearInterval(this.interval);
+  },
+
+  render: function() {
+ 		return (
+ 			<div className="col-md-6">
+         <h1>{this.props.name} @ {this.state.data.bid}</h1>
+      </div>
+ 		);
+ 	},
 
   getInitialState: function() {
 
@@ -34,14 +30,22 @@ const Ticker = React.createClass({
     };
 
   },
-	render() {
-		return (
-			<div className="col-md-6">
-          <h1>{this.props.name} @ {this.state.data.ask}</h1>
-        <button onClick={this.updatePrice}>Update</button>
-      </div>
-		);
-	}
+
+  updatePrice: function(urlname) {
+
+    //this.setState({loaded: false});
+
+    console.log('updated');
+
+    jquery.get('/api/' + urlname).then(function(data) {
+      return this.setState({
+        loaded: true,
+        data: data
+      });
+    }.bind(this));
+
+  }
+
 });
 
 
