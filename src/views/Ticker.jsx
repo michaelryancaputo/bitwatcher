@@ -1,17 +1,19 @@
 import jquery from "jquery";
 import React from "react";
 import Superagent from "superagent";
+import SetIntervalMixin from "../helpers/set-interval-mixin.jsx";
 
 const Ticker = React.createClass({
+  mixins: [SetIntervalMixin],
 
   componentDidMount: function() {
 
-    this.interval = setInterval(this.updatePrice.bind(null, this.props.urlname), 4000);
+    // setting the price on load
+    this.updatePrice(this.props.urlname);
 
-  },
+    // starting an interval to re-set price
+    this.setInterval(this.updatePrice.bind(null, this.props.urlname), 5000);
 
-  componentWillUnmount: function() {
-    clearInterval(this.interval);
   },
 
   render: function() {
