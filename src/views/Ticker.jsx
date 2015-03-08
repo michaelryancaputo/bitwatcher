@@ -1,12 +1,9 @@
+import jquery from "jquery";
 import React from "react";
 import Superagent from "superagent";
-import Loader from "react-loader";
-import jquery from "jquery";
 
 const Ticker = React.createClass({
   updatePrice: function() {
-
-    console.log('updating price');
 
     this.setState({loaded: false});
 
@@ -40,9 +37,7 @@ const Ticker = React.createClass({
 	render() {
 		return (
 			<div className="col-md-6">
-        <Loader loaded={this.state.loaded}>
           <h1>{this.props.name} @ {this.state.data.ask}</h1>
-        </Loader>
         <button onClick={this.updatePrice}>Update</button>
       </div>
 		);
