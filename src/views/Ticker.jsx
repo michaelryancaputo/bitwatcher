@@ -7,7 +7,7 @@ const Ticker = React.createClass({
 
     this.setState({loaded: false});
 
-    jquery.get('http://localhost:8000/api/' + this.props.urlname).then(function(data) {
+    jquery.get('/api/' + this.props.urlname).then(function(data) {
       this.setState({
         loaded: true,
         data: data
@@ -17,7 +17,7 @@ const Ticker = React.createClass({
   },
   componentDidMount: function() {
 
-    jquery.get('http://localhost:8000/api/' + this.props.urlname).then(function(data) {
+    jquery.get('/api/' + this.props.urlname).then(function(data) {
       this.setState({
         loaded: true,
         data: data
