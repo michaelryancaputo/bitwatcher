@@ -11,16 +11,16 @@ const Ticker = React.createClass({
   },
 
   componentWillUnmount: function() {
-      clearInterval(this.interval);
+    clearInterval(this.interval);
   },
 
   render: function() {
- 		return (
- 			<div className="col-md-6">
-         <h1>{this.props.name} @ {this.state.data.bid}</h1>
+    return (
+      <div className="col-md-6">
+        <h1>{this.props.name} @ {this.state.data.bid}</h1>
       </div>
- 		);
- 	},
+    );
+  },
 
   getInitialState: function() {
 
