@@ -31,8 +31,9 @@ server.route({
 				xchange[request.params.params].ticker(function(error, resp){
 					if(!error){
 						reply(resp);
-						console.log(resp);
-					}
+					} else {
+            reply('there was an error getting data');
+          }
 				});
 
 			} else {
