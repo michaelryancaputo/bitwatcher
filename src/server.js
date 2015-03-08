@@ -14,7 +14,7 @@ import _ from "underscore";
 const server = new Server();
 
 server.connection({
-	port: 8000
+	port: process.env.PORT || 8000
 });
 
 server.route({
