@@ -6,7 +6,7 @@ const Ticker = React.createClass({
 
   componentDidMount: function() {
 
-    this.interval = setInterval(this.updatePrice(this.props.urlname), 5000);
+    this.interval = setInterval(this.updatePrice.bind(null, this.props.urlname), 4000);
 
   },
 
