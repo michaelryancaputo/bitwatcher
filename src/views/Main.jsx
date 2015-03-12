@@ -10,7 +10,7 @@ import Ticker from "./Ticker";
 const Main = React.createClass({
 	render: function() {
     return (
-			<div>
+			<div className="row">
 				<h1>Bitcoin Dashboard.</h1>
         <Ticker name="Bitfinex" urlname="bitfinex" />
         <Ticker name="Bitstamp" urlname="bitstamp" />
